@@ -50,7 +50,7 @@ public class BookTest {
     public void isCheckoutTest(){
         assertEquals(false, book.isCheckout());
     }
-    
+
     @Test
     public void setCheckoutTest(){
         book.setCheckout(true);

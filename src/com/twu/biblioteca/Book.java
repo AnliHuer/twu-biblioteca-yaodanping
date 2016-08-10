@@ -1,51 +1,47 @@
 package com.twu.biblioteca;
 
-import org.junit.Before;
-
-import java.util.Date;
-
-public class Book {
+class Book {
     private int id;
     private String author;
     private String publicationDate;
     private boolean isCheckout;
 
-    public Book(int id, String author, String publicationDate) {
+    Book(int id, String author, String publicationDate) {
         this.id = id;
         this.author = author;
         this.publicationDate = publicationDate;
         this.isCheckout = false;
     }
 
-    public int getId() {
+    int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    void setId(int id) {
         this.id = id;
     }
 
-    public String getAuthor() {
+    String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    void setAuthor(String author) {
         this.author = author;
     }
 
-    public String getPublicationDate() {
+    String getPublicationDate() {
         return publicationDate;
     }
 
-    public boolean isCheckout() {
+    boolean isCheckout() {
         return isCheckout;
     }
 
-    public void setCheckout(boolean checkout) {
+    void setCheckout(boolean checkout) {
         isCheckout = checkout;
     }
 
-    public void setPublicationDate(String publicationDate) {
+    void setPublicationDate(String publicationDate) {
         this.publicationDate = publicationDate;
     }
 }
