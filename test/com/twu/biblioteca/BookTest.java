@@ -45,4 +45,15 @@ public class BookTest {
         book.setPublicationDate("2016-01-01");
         assertEquals("2016-01-01", book.getPublicationDate());
     }
+
+    @Test
+    public void isCheckoutTest(){
+        assertEquals(false, book.isCheckout());
+    }
+    
+    @Test
+    public void setCheckoutTest(){
+        book.setCheckout(true);
+        assertEquals(true, book.isCheckout());
+    }
 }
