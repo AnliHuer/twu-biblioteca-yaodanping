@@ -2,18 +2,18 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 
-class Library {
+public class Library {
     private ArrayList<Book> bookList;
 
-    Library(ArrayList<Book> bookList) {
+    public Library(ArrayList<Book> bookList) {
         this.bookList = bookList;
     }
 
-    ArrayList<Book> getLibrary() {
+    public ArrayList<Book> getBookList() {
         return bookList;
     }
 
-    void setLibrary(ArrayList<Book> bookList) {
+    public void setBookList(ArrayList<Book> bookList) {
         this.bookList = bookList;
     }
 

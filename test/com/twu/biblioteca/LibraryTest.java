@@ -24,7 +24,7 @@ public class LibraryTest {
 
     @Test
     public void getLibrary() throws Exception {
-        assertEquals(2, library.getLibrary().size());
+        assertEquals(2, library.getBookList().size());
     }
 
     @Test
@@ -34,15 +34,15 @@ public class LibraryTest {
         ArrayList<Book> bookList = new ArrayList<>();
         bookList.add(book);
 
-        library.setLibrary(bookList);
-        assertEquals(1, library.getLibrary().size());
+        library.setBookList(bookList);
+        assertEquals(1, library.getBookList().size());
     }
 
     @Test
     public void showBookList() throws Exception {
         String bookListString = "";
 
-        ArrayList<Book> list = library.getLibrary();
+        ArrayList<Book> list = library.getBookList();
         for (Book book : list) {
             bookListString += book.getId() + "\t" + book.getAuthor() + "\t" + book.getPublicationDate() + "\n";
         }
