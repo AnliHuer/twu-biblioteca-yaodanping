@@ -53,4 +53,42 @@ public class MovieService {
 
         System.out.println("That is not a valid movie to return.");
     }
+
+    public void selectMovieOption() {
+        String inputOption = new InputService().getInput();
+
+        switch (inputOption) {
+            case "0":
+                new MenuService().showMenu();
+                new StartService().selectAction();
+                break;
+            case "1":
+                this.showMovieList();
+                new MenuService().showBookOptions();
+                this.selectMovieOption();
+                break;
+            case "2":
+                System.out.println("Please input checkout movie id:");
+
+                this.checkoutMovie(new InputService().getInput());
+                this.showMovieList();
+                new MenuService().showBookOptions();
+                this.selectMovieOption();
+                break;
+            case "3":
+                System.out.println("Please input return movie id: ");
+
+                this.returnMovie(new InputService().getInput());
+                this.showMovieList();
+                new MenuService().showBookOptions();
+                this.selectMovieOption();
+                break;
+            default:
+                System.out.println("Please input a valid number");
+
+                new MenuService().showBookOptions();
+                this.selectMovieOption();
+                break;
+        }
+    }
 }

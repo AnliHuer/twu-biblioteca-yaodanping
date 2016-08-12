@@ -2,14 +2,14 @@ package com.twu.biblioteca.service;
 
 import com.twu.biblioteca.Constant;
 
-import java.util.Scanner;
-
 public class StartService {
 
     private BookService bookService;
+    private MovieService movieService;
 
     public StartService() {
         this.bookService = new BookService(new Constant().getBookList());
+        this.movieService = new MovieService(new Constant().getMovieList());
     }
 
     public void start(){
@@ -28,6 +28,10 @@ public class StartService {
             case "1":
                 new MenuService().showBookOptions();
                 bookService.selectBookOption();
+                break;
+            case "2":
+                new MenuService().showMovieOptions();
+                movieService.selectMovieOption();
                 break;
             default:
                 System.out.println("Please input valid number!");
