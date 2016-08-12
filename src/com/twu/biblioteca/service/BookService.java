@@ -13,18 +13,18 @@ public class BookService {
         this.bookList = bookList;
     }
 
-    public void selectBookOption() {
+    public void selectBookOption(String username) {
         String inputOption = new InputService().getInput();
 
         switch (inputOption) {
             case "0":
                 new MenuService().showMenu();
-                new StartService().selectAction();
+                new StartService().selectAction(username);
                 break;
             case "1":
                 this.showBookList(new Constant().getBookList());
                 new MenuService().showBookOptions();
-                this.selectBookOption();
+                this.selectBookOption(username);
                 break;
             case "2":
                 System.out.println("Please input checkout book id:");
@@ -32,7 +32,7 @@ public class BookService {
                 bookList = this.selectCheckoutBook(bookList, new InputService().getInput());
                 this.showBookList(bookList);
                 new MenuService().showBookOptions();
-                this.selectBookOption();
+                this.selectBookOption(username);
                 break;
             case "3":
                 System.out.println("Please input return book id: ");
@@ -40,13 +40,13 @@ public class BookService {
                 bookList = this.selectReturnBook(bookList, new InputService().getInput());
                 this.showBookList(bookList);
                 new MenuService().showBookOptions();
-                this.selectBookOption();
+                this.selectBookOption(username);
                 break;
             default:
                 System.out.println("Please input a valid number");
 
                 new MenuService().showBookOptions();
-                this.selectBookOption();
+                this.selectBookOption(username);
                 break;
         }
     }

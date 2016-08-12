@@ -54,18 +54,18 @@ public class MovieService {
         System.out.println("That is not a valid movie to return.");
     }
 
-    public void selectMovieOption() {
+    public void selectMovieOption(String username) {
         String inputOption = new InputService().getInput();
 
         switch (inputOption) {
             case "0":
                 new MenuService().showMenu();
-                new StartService().selectAction();
+                new StartService().selectAction(username);
                 break;
             case "1":
                 this.showMovieList();
                 new MenuService().showBookOptions();
-                this.selectMovieOption();
+                this.selectMovieOption(username);
                 break;
             case "2":
                 System.out.println("Please input checkout movie id:");
@@ -73,7 +73,7 @@ public class MovieService {
                 this.checkoutMovie(new InputService().getInput());
                 this.showMovieList();
                 new MenuService().showBookOptions();
-                this.selectMovieOption();
+                this.selectMovieOption(username);
                 break;
             case "3":
                 System.out.println("Please input return movie id: ");
@@ -81,13 +81,13 @@ public class MovieService {
                 this.returnMovie(new InputService().getInput());
                 this.showMovieList();
                 new MenuService().showBookOptions();
-                this.selectMovieOption();
+                this.selectMovieOption(username);
                 break;
             default:
                 System.out.println("Please input a valid number");
 
                 new MenuService().showBookOptions();
-                this.selectMovieOption();
+                this.selectMovieOption(username);
                 break;
         }
     }
