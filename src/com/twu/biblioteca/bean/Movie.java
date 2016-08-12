@@ -6,13 +6,15 @@ public class Movie {
     private String year;
     private String director;
     private String rate;
+    private boolean isCheckout;
 
-    public Movie(int id, String name, String year, String director, String rate) {
+    public Movie(int id, String name, String year, String director, String rate, boolean isCheckout) {
         this.id = id;
         this.name = name;
         this.year = year;
         this.director = director;
         this.rate = rate;
+        this.isCheckout = isCheckout;
     }
 
     public int getId() {
@@ -53,5 +55,13 @@ public class Movie {
 
     public void setRate(String rate) {
         this.rate = rate;
+    }
+
+    public boolean isCheckout() {
+        return isCheckout;
+    }
+
+    public void setCheckout(boolean checkout) {
+        isCheckout = checkout;
     }
 }

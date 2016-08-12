@@ -20,9 +20,9 @@ public class Constant {
     }
 
     public ArrayList<Movie> getMovieList() {
-        Movie movieOne = new Movie(1, "Hello world", "2013-01-01", "Tom", "1");
-        Movie movieTwo = new Movie(2, "Hello java", "2013-01-01", "Tom", "10");
-        Movie movieThree = new Movie(2, "Hello Junit", "2013-01-01", "Tom", "10");
+        Movie movieOne = new Movie(1, "Hello world", "2013-01-01", "Tom", "1", false);
+        Movie movieTwo = new Movie(2, "Hello java", "2013-01-01", "Tom", "10", false);
+        Movie movieThree = new Movie(2, "Hello Junit", "2013-01-01", "Tom", "10", false);
 
         ArrayList<Movie> list = new ArrayList<>();
         list.add(movieOne);
