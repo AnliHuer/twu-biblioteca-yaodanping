@@ -2,6 +2,7 @@ package com.twu.biblioteca;
 
 import com.twu.biblioteca.bean.Book;
 import com.twu.biblioteca.bean.Movie;
+import com.twu.biblioteca.bean.User;
 
 import java.util.ArrayList;
 
@@ -30,5 +31,18 @@ public class Constant {
         list.add(movieThree);
 
         return list;
+    }
+
+    public ArrayList<User> getUserList(){
+        User userOne = new User("Tony", "12345", "1@qq.com","13112341234");
+        User userTwo = new User("Andy", "00000", "2@qq.com","13112341234");
+        User userThree = new User("Alice", "11111", "3@qq.com","13112341234");
+
+        ArrayList<User> userList = new ArrayList<>();
+        userList.add(userOne);
+        userList.add(userTwo);
+        userList.add(userThree);
+
+        return userList;
     }
 }
