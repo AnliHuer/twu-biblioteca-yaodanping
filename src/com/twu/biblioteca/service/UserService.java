@@ -30,12 +30,10 @@ public class UserService {
             User user = this.userArrayList.get(i);
 
             if (username.equals(user.getUsername()) && password.equals(user.getPassword())) {
-                System.out.println("Login Successful.");
                 return true;
             }
         }
 
-//        System.out.println("Username or password error!");
         return false;
     }
 
