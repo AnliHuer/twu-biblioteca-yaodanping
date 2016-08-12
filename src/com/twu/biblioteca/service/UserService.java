@@ -22,6 +22,19 @@ public class UserService {
             }
         }
 
-        System.out.println("Please input valid username");
+        System.out.println("Please input valid username.");
+    }
+
+    public void userLogin(String username, String password){
+        for (int i = 0; i < this.userArrayList.size(); i++) {
+            User user = this.userArrayList.get(i);
+
+            if (username.equals(user.getUsername()) && password.equals(user.getPassword())) {
+                System.out.println("Login Successful.");
+                return;
+            }
+        }
+
+        System.out.println("Username or password error!");
     }
 }
