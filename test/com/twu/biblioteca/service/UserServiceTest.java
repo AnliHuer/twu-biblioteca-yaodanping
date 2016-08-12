@@ -33,13 +33,11 @@ public class UserServiceTest extends TestBase{
 
     @Test
     public void successUserLoginTest(){
-        userService.userLogin("Tony", "12345");
-        assertEquals("Login Successful.\n", bytes.toString());
+        assertEquals(userService.userLogin("Tony", "12345"), true);
     }
 
     @Test
     public void failUserLoginTest(){
-        userService.userLogin("Tony", "00000");
-        assertEquals("Username or password error!\n", bytes.toString());
+        assertEquals(userService.userLogin("Tony", "00000"), false);
     }
 }
