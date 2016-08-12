@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.bean.Book;
+import com.twu.biblioteca.bean.Movie;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,19 @@ public class Constant {
         list.add(bookOne);
         list.add(bookTwo);
         list.add(bookThree);
+
+        return list;
+    }
+
+    public ArrayList<Movie> getMovieList() {
+        Movie movieOne = new Movie(1, "Hello world", "2013-01-01", "Tom", "1");
+        Movie movieTwo = new Movie(2, "Hello java", "2013-01-01", "Tom", "10");
+        Movie movieThree = new Movie(2, "Hello Junit", "2013-01-01", "Tom", "10");
+
+        ArrayList<Movie> list = new ArrayList<>();
+        list.add(movieOne);
+        list.add(movieTwo);
+        list.add(movieThree);
 
         return list;
     }
